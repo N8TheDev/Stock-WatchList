@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stock_WatchList.SearchPage"
+             NavigationPage.HasNavigationBar="True"
+             NavigationPage.BackButtonTitle="Back To WatchList"
+             NavigationPage.HasBackButton="True"
+             NavigationPage.IconColor="White"
+             BackgroundColor="LightGray">
+
+    <StackLayout>
+        <SearchBar Placeholder="Search items..."/>
+        <ListView x:Name="searchResults" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid Margin="20,1,20,20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.75*" />
+                                <ColumnDefinition Width="0.75*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="Resources/drawable/icon.png"></Image>
+                            <Label Grid.Column="1" Text="{Binding Symbol}" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                            <Label Grid.Column="1" Text="{Binding CompanyName}" FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                            <Label Grid.Column="3" Text="{Binding Price}" x:Name="{Binding CompanyName}" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

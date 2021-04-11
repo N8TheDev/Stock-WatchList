@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stock_WatchList.MainPage" BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Frame BackgroundColor="Transparent">
+                <Label Grid.Column="0" Text="Watch List" BackgroundColor="Transparent" TextColor="Gray" FontSize="50" FontAttributes="Bold"></Label>
+            </Frame>
+            <Frame BackgroundColor="Transparent">
+                
+            </Frame>
+            <ImageButton Clicked="ImageButton_Clicked" Source="search" Margin="10, 10, 10, 10" HeightRequest="30" BackgroundColor="Transparent">
+                
+            </ImageButton>
+        </StackLayout>
+        <Label Text="Symbol                                                        Price - USD" FontSize="16" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        <Label Text="________________________________________________________________________________________________________________________" FontSize="7" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+        <Label Text="" FontSize="3" TextColor="Gray"></Label>
+        <ScrollView VerticalScrollBarVisibility="Always" HorizontalScrollBarVisibility="Always">
+            <StackLayout>
+                <Grid Margin="20,1,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="AAPL" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Apple inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding ApplePrice}" x:Name="Apple" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="NIO" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Nio inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding NioPrice}" x:Name="Nio" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="PLTR" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Palantir inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding PalantirPrice}" x:Name="Palantir" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="TSLA" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Tesla inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding TeslaPrice}" x:Name="Tesla" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="XPEV" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="XPeng inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding XpengPrice}" x:Name="XPeng" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="AMZN" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Amazon inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding AmazonPrice}" x:Name="Amazon" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="PDD" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Pinduoduo inc." FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding PinduoduoPrice}" x:Name="Pinduoduo" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="DIS" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Walt Disney" FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding DisneyPrice}" x:Name="Disney" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="AMD" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="AMD inc" FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding AmdPrice}" x:Name="Amd" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="20,1,20,20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.75*" />
+                        <ColumnDefinition Width="0.75*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Resources/drawable/icon.png">
+
+                    </Image>
+                    <Label Grid.Column="1" Text="TWTR" TextColor="White" FontSize="17" VerticalTextAlignment="Start"/>
+                    <Label Grid.Column="1" Text="Twitter inc" FontSize="13" TextColor="Gray" VerticalTextAlignment="End"/>
+                    <Label Grid.Column="3" Text="{Binding TwitterPrice}" x:Name="Twitter" TextColor="LimeGreen" HorizontalTextAlignment="End" FontSize="17" FontAttributes="Bold" VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
